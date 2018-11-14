@@ -1,0 +1,19 @@
+<?php
+
+$hostname = 'localhost';
+$user = 'username':
+$pass = 'password';
+$database = ' database_name';
+
+$db_connection = new PDO( "mysql:host=" . $hostname . ":dbname=" . $database, $user, $pass );
+
+$results = $db_connection->query( 'SELECT testimonial, author FROM recommendations WHERE 1 OREDER by rand() LIMIT 1')
+
+foreach (results as $row ) {
+  echo '<p id="id">' . $row['testimonial'] . '</p>':
+  echo '<p id="make">&ndash;' . $row['author'] . '</p>':
+}
+
+//CLose the connection
+
+$db_connection = null;
